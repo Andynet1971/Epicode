@@ -1,0 +1,82 @@
+#logo {
+    text-align: center;
+}
+
+hr {
+    margin: 0px;
+    color: chartreuse;
+}
+
+
+header h3 {
+    text-align: center;
+    color: darkgreen;
+    padding: 20px;
+    margin: 1px;
+    background-color: #fdfbf1;
+    border-top: 2px solid #ffd877;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: 40px 25%;
+}
+
+p {
+    text-align: left;
+    font-size: 18px;
+    margin: 20px 28%;
+}
+
+#foto {
+    text-align: center;
+}
+
+figcaption {
+    font-size: 20px;
+    color: rgb(172, 169, 163);
+}
+
+#primo {
+    font-size: 20px;
+    margin: 0 28%;
+    color: brown;
+    border-left: 2px solid #ffd877;
+    
+}
+
+#secondo {
+    color: #107777;
+    font-size: 20px;
+    margin: 0 28%;
+    border-left: 2px solid #c8b53c;
+    text-decoration: underline;
+}
+
+main h3 {
+    font-size: 27px;
+    margin: 0 28%;
+    border-bottom: 2px solid #c4f3f2;
+}
+h4 {
+    font-size: 27px;
+    margin: 0 28%;
+}
+section li {
+    font-size: 21px;
+    margin: 0 28%;
+    line-height: 40px;
+}
+
+#ricetta span {
+    margin: 0 28%;
+}
+
+footer {
+    margin: 0 28%;
+    font-size: 18px;
+}
+a {
+    color: #107777; 
+}
