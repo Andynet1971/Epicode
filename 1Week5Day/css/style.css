@@ -1,0 +1,86 @@
+/* Your styles here */
+html {margin: 0px; text-align: center;}
+
+header {font-family: "Montserrat", 'Helvetica Neue', sans-serif;}
+
+main {font-family: "Open Sans", 'Helvetica Neue', sans-serif;}
+
+p {color: #000000;}
+
+h5 {font-weight: normal; line-height: normal;}
+
+h2 {color: #26a4c3}
+
+a {color: #ffffff; font-size: medium;}
+
+#logo 
+{
+    background-color: #000000;
+    text-align: center;
+    margin: 5px;
+    padding: 30px;
+    color: #26a4c3
+}
+
+#sfondo 
+{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 5px;
+    padding: 0px;
+    color: #26a4c3
+}
+#bottone 
+{
+    margin: 140px;
+    background-color: #f04c2f; 
+    padding: 10px; 
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+article  h2 {color: #26a4c3;}
+
+#tasto 
+{
+    color: white;
+    margin: 40px;
+    background-color: #f04c2f ;
+}
+
+body {font-family: "Open Sans", 'Helvetica Neue', sans-serif; }
+
+figure 
+
+{
+    border: 1px solid #6a0ce5;
+    border-radius: 100%;
+}
+
+section 
+{
+    background-color: #d52626;
+    padding: 30px;
+    color: white;
+}
+
+section p {margin: 1px;}
+
+span {font-size: x-small;}
+
+.immagini  
+{
+    margin-top: 60px;
+}
+
+#colore {background-color: #65b2c7;}
+
+footer
+{
+    padding: 22px;
+    background-color: #65b2c7;
+    color: white;
+}
+footer span {font-size: medium;}
+
+#colore2 {color: white}
