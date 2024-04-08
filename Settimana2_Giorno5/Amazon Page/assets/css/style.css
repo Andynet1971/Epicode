@@ -1,0 +1,182 @@
+/* Your styles here */
+
+/*********** Faccio una breve premessa... *************/
+
+/* La cosa che ho cercato di curare molto nella realizzazione di questa pagina,
+   oltre a tutti i vari dettagli (colori, garndezza font, grandezza immagini,
+   posizionamento più fedele possibile all'originale, è stata quella di cercare
+   di rendere più responsive possibile la pagina. Per questo motivo non ho mai usato
+   per definire la grandezza delle immagini, dei font, dei padding e dei margini
+   le misure in pixel ma ho sempre usato misure relative. In questo modo ridimensionando
+   la pagina a qualsiasi grandezza, l'impaginazione rimane costante.
+*/
+
+body { /* definisco caratteristiche valide per tutto il body */
+    background-color: #e9edee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main { /* definisco il margine per tutto il main */
+    margin: 2%;
+}
+
+h2 { /* definisco h2 */
+    display: inline;
+    font-size: 1.4lvw;
+    font-weight: 600;
+}
+
+nav a { /* menù di navigazione */
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1lvw;
+    padding-left: 1%;  
+}
+
+p { /* definisco p */
+    display: inline;
+    color: #00747c;
+    font-weight: 600;
+    font-size: 1.1lvw;
+    padding-left: 1%;
+}
+
+h6 { /*definisco h2 */
+    text-align: center;
+}
+
+a { /*definisco il colore del tag a */
+    color: white;
+}
+
+#logo { /*logo all'inizio della pagina */
+    display: block;
+    background-color: #222f3f;
+    background-position: left;
+    padding: 0.7% 0% 0.5% 2%;
+}
+
+#bar {  /* barra di navigazione */
+    background-color: #364759;
+    padding: 0.3%;
+}
+
+#barra  { /* barra arancione a inizio pagina */
+    color: white;
+    font-size: 1.2lvw;
+    background-color: #f56600; 
+    padding: 0.6%;
+    text-align: center;
+    margin-bottom: 2%;
+    background-size: contain;
+}
+
+#testa { /* importo da css la barra verde e definisco i parametri */
+    width: 96%;
+    background-image: url(../images/bg-image.png);
+    background-size: contain;
+    padding: 2%;
+}
+
+#titolo { /* titolo sulla barra verde */
+    text-align: center;
+    color: white;
+    font-size: 2.3lvW;
+    font-weight: bold;
+    padding: 3% 0% 3%;
+}
+
+#sotto_titolo { /*sottotitolo sulla barra verde */
+    text-align: center;
+    color: white;
+    font-size: 1.4lvW;
+    font-weight: bold;
+}
+
+#foto_affiancate { /* definisco i parametri per le 4 foto affiancate */
+    background-color: white;
+    margin: 2.3% 0% 0% 0%;
+    padding: 1.3% 0% 29% 2%;
+}
+
+/* questo è stato il punto più difficile per me in quanto provando ad importare le
+   4 foto da html e cercando di dare una classe unica per sistemarle utilizzando solo
+   valori relativi la cosa non mi è riuscita. Utilizzando le misure in pixel era abbastanza
+   facile con valori relativi ho trovato diverse difficoltà. Per questo motivo ho trovato
+   una soluzione alternativa e cioè importandole direttamente da css. In questo modo ho
+   dovuto scrivere 4 classi ma almeno si ridimensionano come tutti gli altri elementi. */
+
+.immagine1 {    /* foto 1 */
+
+    background-image: url(../images/img_1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    margin-top: 1.5%;
+    padding-bottom: 28%;
+    width: 23%;
+    height: 90%;
+}
+
+.immagine2 {    /* foto2 */
+
+    background-image: url(../images/img_2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    margin-top: 1.5%;
+    padding-bottom: 28%;
+    width: 23%;
+    height: 90%;
+    margin: -28% 25%;
+}
+.immagine3 {    /* foto 3 */
+
+    background-image: url(../images/img_3.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    margin-top: 1.5%;
+    padding-bottom: 28%;
+    width: 23%;
+    height: 90%;
+    margin: -28% 50%;
+}
+
+.immagine4 {     /* foto 4*/
+
+    background-image: url(../images/img_4.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    margin-top: 1.5%;
+    padding-bottom: 28%;
+    width: 23%;
+    height: 90%;
+    margin: -28% 75%;
+}
+
+#audio_video { /* definisco i parametri per le due foto grandi della pagina */
+    margin-top: 2%;
+    text-align: center;
+    width: 100%;
+}
+
+#ultima_foto { /* margine sopra per l'ultima foto */
+    margin-top: 2%;
+}
+
+#ultimo { /* penultima barra col link per tornare a inizio pagina */
+    text-align: center;
+    font-size: 1.3lvw;
+    background-color: #364759;
+    padding: 1.1%;
+}
+
+#logo_finale { /* logo di Amazon a pie pagina */
+    text-align: center;
+    display: block;
+    background-color: #222f3f;
+    padding: 4.6% 0% 4.6%;
+}

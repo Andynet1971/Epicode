@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Esercizi aggiuntivi (facoltativi) per D4
+
+/* EXTRA 1
+ Scrivi una funzione chiamata "checkArray" che riceve un array di numeri casuali (creati con la funzione "giveMeRandom") e per ogni elemento stampa in console
+ se il suo valore è maggiore di 5 o no.
+ La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+// Creo un vettore di 5 elementi in modo casuale con numeri compresi tra 1 e 10
+const vettore = [];
+let app;
+function giveMeRandom () {
+    for (let i = 0; i < 5; i++) {
+        app = Math.ceil(Math.random() * 10);
+        vettore[i] = app;
+    }
+}
+// Creo la funziona checkArray come da descrizione
+function checkArray(vettore1) {
+    let somma = 0;
+    for (let i = 0; i < vettore.length; i++) {
+        if (vettore1[i] > 5) {
+            somma = somma + vettore1[i];
+            console.log(vettore1[i]);
+        } 
+    }
+    return somma;
+}
+giveMeRandom (); // Richiamo la funzione e genero il vettore con numeri casuali
+var risultato = checkArray(vettore); // Assegno alla variabile "risultato" il valore di return della funzione
+console.log(risultato); // Stampo il risultato
+
+
+/* EXTRA 2
+ Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
+ Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+const shoppingCart = [
+  {
+    price: 48,
+    name: "cappelo",
+    id: "AB1234",
+    quantity: 3
+  },
+  {
+    price: 27,
+    name: "cinta",
+    id: "JU9586",
+    quantity: 2
+  },
+  {
+    price: 73,
+    name: "borsa",
+    id: "GH3456",
+    quantity: 1
+  },
+];
+
+function shoppingCartTotal () {
+    let somma = 0;
+    for (let i = 0; i < shoppingCart.length; i++)  {
+        somma = somma + shoppingCart[i].price * shoppingCart[i].quantity;
+    }
+    console.log(somma);
+}
+shoppingCartTotal ();
+
+/* EXTRA 3
+ Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
+ Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto dello stesso tipo, lo aggiunge a "shoppingCart" e ritorna il nuovo numero totale degli elementi.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+function addToShoppingCart (shoppingCart1) {
+    shoppingCart.push(shoppingCart1);
+    console.log(shoppingCart);
+    let somma = 0;
+    for (let i = 0; i < shoppingCart.length; i++) {
+        somma = somma + shoppingCart[i].quantity;
+    }
+    return somma;
+}
+
+const nuovoOggetto = {
+        price: 38,
+        name: "guanti",
+        id: "FQ8463",
+        quantity: 2,
+};
+
+risultato = addToShoppingCart(nuovoOggetto);
+console.log(risultato);
+
+/* EXTRA 4
+ Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
+ Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+function maxShoppingCart (shoppingCart1) {
+    let oggwttoCostoso = shoppingCart[0].name;
+    let prezzo = shoppingCart[0].price;
+    for (let i = 1; i < shoppingCart.length; i++) {
+        if (shoppingCart[i].price > prezzo) {
+            oggwttoCostoso = shoppingCart[i].name;
+        }
+    }
+
+    return oggwttoCostoso;
+}
+
+risultato = maxShoppingCart(shoppingCart);
+console.log(risultato);
+
+/* EXTRA 5
+ Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
+ Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+function latestShoppingCart (shoppingCart1) {
+    let indice = shoppingCart1.length - 1;
+    let ultimo = shoppingCart1[indice];
+    return ultimo;
+}
+risultato = latestShoppingCart(shoppingCart);
+console.log(risultato);
+
+/* EXTRA 6
+ Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
+ La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+// Credo che la formulazione sia sbagliata in quanto se il numero passato è 9 e la funzione genera numeri tra 0 e 9, il numero generato non potrà mai essere
+// superiore a 9 in quanto è uguale per cui imposterò nella mia funzione > a 10
+
+// genero un numero casuale tra 0 e 9
+let numeroCasuale = Math.floor(Math.random() * 10);
+console.log(numeroCasuale);
+
+function loopUntil (num) {
+    let contatore = 0;
+    while (contatore < 3) {
+        numGenerato = Math.ceil(Math.random() * 10);
+        console.log(numGenerato);
+        if (numGenerato > num) {
+            contatore++;
+        }
+    }
+}
+loopUntil (numeroCasuale);
+
+/* EXTRA 7
+Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+var vect = [5,8,"casa",true,6,"macchina",8,false,23];
+console.log(vect);
+console.log(vect.length);
+function average (vector) {
+    let somma = 0;
+    let numeri = 0;
+    for (let i = 0; i < vector.length; i++) {
+        if (typeof vector[i] === "number") {
+             numeri++;
+             somma =somma + vector[i];
+        }   
+    }
+    return somma / numeri;
+}
+
+risultato = average (vect);
+console.log(risultato);
+
+/* EXTRA 8
+ Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+const vettoreDiStringhe = ["asrsd","sdfgsggffsdg","sdfhgsdfgfdhertfdhgdfhg","dfgdfgdf","thhg","Adfgdfgdfgdfgssdfgsdfgdfgdfg","rghrgrg","sdfgdfgdsfgfgfdg"];
+function longest (vector) {
+    let indice = 0;
+    let stringa = vector[0];
+    let lunghezzaStringa = vector[0].length;
+    for (let i = 1; i < vector.length; i++) {
+        if (vector[i].length > lunghezzaStringa) {
+            indice = i;
+            stringa = vector[i];
+            lunghezzaStringa = vector[i].length;
+        }
+
+    }
+    return [indice, stringa, lunghezzaStringa];
+}            
+
+risultato = longest(vettoreDiStringhe);
+console.log("la stringa più lunga è: ",risultato[1]," è alla posizione ",risultato[0]," dell'array ed è lunga ",risultato[2]," caratteri")
+/* EXTRA 9
+ Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
+ La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+let contenutoMail = "QUESTO E' UNO SPAM DI PROVA";
+function emailContent (verifica) {
+    return !verifica.includes("SPAM") && !verifica.includes("SCAM");
+}
+
+risultato = emailContent(contenutoMail);
+if (risultato) {
+    console.log("La tua cassela email non contiene SPAM");}
+    else {console.log("La tua cassela email contiene SPAM");}
+
+console.log(risultato);
+
+/* EXTRA 10
+ Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+/* EXTRA 11
+ Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
+ Il risultato deve essere una matrice di "x" volte "y", e i valori devono rispecchiare gli indici della posizione all'interno della matrice.
+ Es.: x = 3, y = 2
+ ["00","01","02"
+ "10","11","12"]
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+function matrixGenerator (x,y) {
+    let matrice = [];
+    for (let a = 0; a < y; a++) {
+          let riga = [];
+        for (let b = 0; b < x; b++) {
+            riga.push(a.toString() + b.toString());
+        }
+        matrice.push(riga);
+    }
+    return matrice;
+}
+
+console.log(matrixGenerator (3,2));
+
+    </script>
+
+</body>
+</html>
