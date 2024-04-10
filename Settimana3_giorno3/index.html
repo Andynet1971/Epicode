@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="#">
+        <div id="formTask"> 
+            <input type="text" placeholder="Aggiungi un task qui" id="campoInput" class="tipoInput">
+           <button onclick="scrivi()" id="bottone" class="tipoBottone">Crea</button>
+           <p id="nuovoTask"></p>
+        </div> 
+    </form>
+    <script>
+            var valoriSalvati = [];
+    function scrivi() {
+        var inp = document.getElementById("campoInput");
+        var valoreInput = inp.value;
+        valoriSalvati.push(valoreInput);
+        var tasks = "";
+        for (var i = 0; i < valoriSalvati.length; i++) {
+            tasks += "<p>" + valoriSalvati[i] + "</p>";
+        }
+        document.getElementById("nuovoTask").innerHTML = tasks;
+        inp.value = "";
+    }
+    </script>
+</body>
+</html>

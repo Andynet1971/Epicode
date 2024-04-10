@@ -1,0 +1,33 @@
+body {
+    background-color: blueviolet;
+}
+#formTask {
+    font-size: 20px;
+    margin: 18% 26%;
+    text-align: left;
+    background-color: white;
+    padding: 1.5% 1%;
+    border-radius: 20px;
+}
+.tipoInput {
+    font-size: 20px;
+    text-align: left;
+    padding: 2% 19% 2% 25%;
+    border-radius: 8px;
+}
+.tipoBottone{
+    text-align: left;
+    font-size: 20px;
+    background-color: aqua;
+    padding: 2% 5% 2% 5%;
+    border: none;
+    border-radius: 8px;
+}
+
+p { font-size: 20px;
+    margin: 2%;
+    padding: 1%;
+    background-color: rgb(216, 216, 238);
+    border-radius: 8px;
+}
+ 
