@@ -1,0 +1,36 @@
+
+header {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+main {margin: 100px 480px;}
+
+.tab {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid;
+}
+
+.numero {
+    font-size: large;
+    font-weight: bold;
+    padding: 2px;
+    float: inline-start;
+    width: 48px;
+    height: 48px;
+    border: 2px solid black;
+    border-radius: 3px;
+  }
+
+.pulsante {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.numeroUscito {
+    background-color: rgb(220, 244, 114);
+}

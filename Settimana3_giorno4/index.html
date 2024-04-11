@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tombola</title>
+</head>
+<body>
+    <header>
+        <h1>Tabellone</h1>
+    <header>
+    <main>
+        <div class="tabellone""></div>
+        <button id= "estrai"class="pulsante">Estrai un Numero</button>
+        <br><br>
+        <input type="number" id="cartelle" class="tasto cartelle">
+        <button class="pulsante">Crea cartelline</button>
+        <form action="#">
+
+        </form>
+        <div id="crea_cartella">
+
+        </div>
+    </main>
+    <script>   
+        var cont = 0;
+        var arrayIndici = [];
+        var numeriDaEstrarre = [];
+        for (let i = 0; i < 90; i++) {arrayIndici[i] = i + 1;}
+        console.log(arrayIndici);
+        for (let i = 0; i < 90; i++) {
+            let lunghezzaArray = arrayIndici.length;
+            let numero_casuale = Math.floor(Math.random() * lunghezzaArray);
+            let numero_estratto = arrayIndici[numero_casuale];
+            numeriDaEstrarre[i] =numero_estratto; 
+            arrayIndici.splice(numero_casuale,1) 
+        }
+
+        const generaNumeriDaEstrarre =function () {
+            const tabella = document.querySelector('.tabellone')
+            for (let i = 1; i < 91; i++) {
+                 tabella.innerHTML += `<div class='numero'>${i}</div>`
+           }
+        }
+        function estraiNumero () {
+            const casella = document.querySelectorAll('.numero')[estratto]
+            casella.classList.add('numeroUscito')
+            
+            
+        }
+        generaNumeriDaEstrarre();
+        estrai.onclick = estraiNumero();
+    </script>
+</body>
+</html>
