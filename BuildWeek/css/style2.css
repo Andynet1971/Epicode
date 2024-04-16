@@ -1,0 +1,227 @@
+
+:root {
+    --percentuale: 0;
+}
+
+body {
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 80vh;
+    font-family: "Lato", sans-serif;
+  }
+  
+h6 {
+  margin-top: 100px;
+  text-align: center;
+  color: red;
+  font-size: 50px;
+  line-height: 70px;
+/*  border: 1px solid yellow;*/
+}
+
+#logo {
+    margin: 2% 0 0 5%;
+}
+
+#titolo {
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+    margin: 1% 0 -1.5% 0;
+    color:  white;
+    text-align: center;
+    font-size: 60px;
+  }
+
+#sotto_titolo {
+    font-family: "Outfit", sans-serif;
+    margin: 1% 0 -15% 0;
+
+    color:  white;
+    text-align: center;
+    font-size: 30px;
+}
+.progress-bar-card {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  
+  .progress-bar-card .progress-bar {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .progress-bar-card .progress-bar svg circle {
+    fill: none;
+    stroke-width: 20px;
+    stroke: #000;
+  
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+  }
+  
+  .progress-bar-card .progress-bar svg circle.inner {
+    stroke: #D20094;
+    stroke-dashoffset: 0;
+  }
+  
+  .progress-bar-card .progress-bar svg circle.outer {
+    stroke: #00FFFF;
+    animation: anim-progress-border 2s forwards;
+  }
+  
+  @keyframes anim-progress-border {
+    100% {
+      stroke-dashoffset: var(--percentuale); /* calc(440 - 440 * 75 / 100); */ /* 110 */
+    }
+  }
+  
+  .progress-bar-card .progress-bar .giuste_sbagliate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d0d0d0;
+  }
+  
+  .progress-bar-card .progress-bar .giuste_sbagliate h2 {
+    margin-top: -5lvh;
+    font-size: 50px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-bar-card .progress-bar .giuste_sbagliate h2 span.risposte-giuste {
+    margin-left: -80lvh;
+
+  }
+
+  .progress-bar-card .progress-bar .giuste_sbagliate h2 span.risposte-sbagliate {
+    margin-left: 100lvh;
+
+  }
+
+  
+  .progress-bar-card .progress-bar .giuste_sbagliate h2 span.pecent_giuste {
+    font-weight: bold;
+    margin-top: 26lvh;
+    margin-left: -310lvh;
+
+  }
+
+.giuste {
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    margin-right: 68%;
+    margin-left: 13%;
+    color: white;
+    transform: translate(15%, -150%);
+  }  
+
+.giuste .prima {
+   font-weight: normal;
+   margin: 0;
+   font-size: 50px;
+}
+
+.giuste .seconda {
+   margin: 0;
+   font-weight: bold;
+   font-size: 50px;
+   line-height: 8lvh;
+}
+
+.giuste .terza {
+   line-height: 0;
+}
+
+.sbagliate {
+   font-family: "Outfit", sans-serif;
+   margin-right: 83%;
+   color: white;
+   transform: translate(410%, -260%);
+  } 
+.sbagliate .prima {
+   font-weight: normal;
+   margin: 0;
+   font-size: 50px;
+  }
+  
+.sbagliate .seconda {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 8lvh;
+  }
+  
+.sbagliate .terza {
+    line-height: 0;
+  }
+
+
+
+#messaggio {
+    padding: 17%;
+    font-family: "Inter", sans-serif;   
+    color: white;
+    font-weight: normal;
+    text-align: center;
+  }
+
+#messaggio h4 {
+    line-height: 0%;
+    font-size: 20px;
+  }
+
+#messaggio h5 {
+    font-size: 20px;
+    line-height: 3%;
+    color: #00FFFF;
+  }
+
+#messaggio p {
+    font-size: 12px;
+    line-height: 10%;
+  }
+
+#bottone {
+  margin-top: -19%;
+  padding: 1%;
+  text-align: center;
+}
+
+#btn {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;   
+  padding: 1% 3% 1%;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+
+
+button {
+  cursor: pointer; /* Imposta il cursore predefinito sui bottoni */
+}
+.custom-cursor {
+  color: #00FFFF;
+  cursor: pointer; /* Imposta il cursore personalizzato */
+}
