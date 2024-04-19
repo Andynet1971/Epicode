@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback-Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/img/epicode-logo-circular.png" type="image/x-icon">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+        pageLanguage: 'it',  // Lingua originale della pagina
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 
+        'google_translate_element');
+        }
+      </script>
+      <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./img/epicode_logo.png" alt="logo">
+        <div id="google_translate_element"></div>
+    </header>
+    <main>
+        <h1 class="Title">Come sta andando</h1>
+        <p class="comtitle">Da 0 a 10, raccomanderesti EPICODE a un amico o collega?</p>
+        <div id="rec">
+        </div>
+        <div class="comment-section">
+            <p class="comtitle">Lasciaci un Feedback sulla tua esperienza fino ad adesso</p>
+            <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Inserisci qui il tuo commento..."></textarea>
+            <br>
+            <button id= "more" onclick="window.location.href='https://epicode.com/it';" type="submit" formtarget="_blank">ALTRE INFORMAZIONI</button>
+        </div>
+
+    </main>
+    <script src="./script/pagina4.js">
+    </script>
+
+</body>
+</html>
