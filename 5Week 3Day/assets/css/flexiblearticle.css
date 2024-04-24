@@ -1,0 +1,35 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #752305;
+}
+
+main section h3 {
+  font-size: x-large;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+}
+
+main section div h4 {
+  font-weight: 800;
+  margin: 0;
+}
+
+.conteiner {
+  width: 1000px;
+  height: 340px;
+  background-color: #fef7e2;
+  border-radius: 15px;
+}
+
+main section div {
+  display: flex;
+  align-items: self-start;
+  padding: 1em;
+}
+
+main section div div {
+  display: flex;
+  padding: 0 1em;
+  flex-direction: column;
+  justify-content: start;
+}

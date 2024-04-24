@@ -1,0 +1,43 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+article {
+  display: flex;
+  background-color: bisque;
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  border-radius: 50px;
+}
+/*
+.scritta {
+  margin-left: 60px;
+}
+*/
+article.conteiner {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.scritta {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+article div button {
+  margin-left: 80px;
+  margin-top: 0.5em;
+  padding: 0.5em 4em;
+  background-color: #ffdf7f;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  color: #752305;
+}

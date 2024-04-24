@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .contenitore {
+      display: flex;
+      justify-content: space-between; /* Distribuisce uniformemente lo spazio libero ai lati */
+      align-items: center; /* Centra verticalmente gli elementi */
+      height: 200px; /* Altezza di esempio */
+    }
+
+    .spazio-vuoto {
+      flex: 1; /* Occupa lo spazio disponibile */
+    }
+  </style>
+  <body>
+    <div class="contenitore">
+      <div class="spazio-vuoto"></div>
+      <div class="div-centrato">Contenuto centrale</div>
+      <div class="spazio-vuoto"></div>
+    </div>
+  </body>
+</html>
