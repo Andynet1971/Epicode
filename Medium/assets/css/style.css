@@ -1,0 +1,622 @@
+/*    BREVE  DESCRIZIONE DEL LAVORO SVOLTO    */
+
+/* Ho svolto tutto il progetto come da specifiche, l'unica parte non svolta è
+   quella riguardante l'animazione delle M. Per il resto mi sembra di aver cercato
+   di duplicare al meglio possibile la pagina principale del sito. Per fare ciò ho
+   fatto largo uso di flex-box che ha reso il lavoro molto più semplice. Ho
+   utilizzato anche position e in un caso anche z-index. Ho fatto principalmente
+   riferimento al sito reale in quanto alcune situazioni non si potevano intuire
+   dai mockups come ad esempio il link "Sign in" che a risoluzione smartphone
+   scompare del tutto ed altri comportamenti come quando si alza la risoluzione
+   dello schermo oltre un certo limite e a quel punto il contenuto non cresce più
+   ma cresce lo spazio all'esterno. Come ultima cosa ho creato un piccolo pezzo
+   di javascript per modificare il colore della Navbar e il colore del bottone.
+   Ho inserito lo script alla fine dell'HTML visto che sono davvero pochissime
+   righe e per evitare di fartle aprire un altro file. Una cosa importante che 
+   vorrei dirle è che secondo me per fare un lavoro curato e completo non
+   sarebbero bastate 7 ore. La mia opinione personale è che sarebbe meglio e 
+   molto utile avere tutto il fine settimana per lavori del genere in quanto
+   si lavora più tranquilli e si ha la possibilità di poter sperimentare sistemi
+   diversi.
+
+
+
+
+
+
+
+/****************     NAV BAR   *******************/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* DEFINISCO CARATTERISTICHE DEL NAV */
+
+nav {
+  width: 100%;
+  color: #191919;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #191919;
+  position: fixed;
+  z-index: 100;
+}
+
+.navbar {
+  background-color: #ffc017;
+  transition: background-color 1s ease;
+}
+
+/* CREO UNA CLASSE PER CAMBIARE COLORE ALLA NAVBAR */
+
+.scrolled {
+  background-color: rgb(255, 255, 255);
+  transition: background-color 1s ease;
+}
+
+/* FONT - DIMENSIONI - PADDING ECC */
+
+.navbar h2 {
+  font-family: "Spectral", serif;
+  font-weight: 700;
+  font-size: xx-large;
+  letter-spacing: -2px;
+  padding: 1.4rem;
+  flex: 0 0 200px;
+}
+
+header nav div div a {
+  color: #191919;
+  text-decoration: none;
+}
+
+/* HO VOLUTO RICREARE IO IL LOGO DI MEDIUM CREANDO DEI CERCHI E GIOCANDO 
+   CON LE DIMENSIONI E BORDER-RADIUS */
+
+.cerchio1 {
+  width: 24px;
+  height: 24px;
+  background-color: #191919;
+  border-radius: 50%;
+  margin-left: 25px;
+  margin-right: 1px;
+}
+
+.cerchio2 {
+  width: 15px;
+  height: 24px;
+  background-color: #191919;
+  border-radius: 50%;
+  margin-right: 1px;
+}
+
+.cerchio3 {
+  width: 5px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #191919;
+}
+
+/* ATTRIBUISCO LO STILE AL BOTTONE */
+
+.getStarted {
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 12px 18px;
+  border-radius: 20px;
+  position: absolute;
+  right: 2em;
+  top: 1.2em;
+  box-shadow: none;
+  background-color: #191919;
+  border: none;
+  cursor: pointer;
+  transition: background-color 1s ease;
+}
+
+/* CREO UNA CLASSE AL BOTTONE CHE VERRA' APPLICATA ALLO SCROLL DELLA PAGINA */
+
+.getStartedChange {
+  background-color: #1a8917;
+  transition: background-color 1s ease;
+}
+
+/* DEFINISCO I VARI STILI AL MENU' E AI TITOLI */
+
+.menu {
+  display: none;
+}
+
+#reg {
+  position: absolute;
+  right: 10em;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.titleSection {
+  width: 100%;
+}
+
+.titolo {
+  position: relative;
+}
+
+.sottotitolo {
+  width: 620px;
+}
+
+.emme {
+  position: absolute;
+  top: 65px;
+  right: 1px;
+}
+
+main {
+  font-family: "Roboto", serif;
+}
+
+.cartelle .cartella {
+  flex-grow: 0;
+}
+
+section .titolo {
+  height: 525px;
+  background-color: #ffc017;
+  border-bottom: 1px solid #191919;
+}
+
+section .titolo h1 {
+  font-family: "Spectral", serif;
+  font-weight: 500;
+  padding: 170px 25px 30px 25px;
+  font-size: 7em;
+}
+
+section .titolo h3 {
+  font-family: "Roboto", serif;
+  padding-left: 1.2em;
+  line-height: 1em;
+  font-size: 1.5em;
+  padding-right: 1.2em;
+}
+
+section .titolo button {
+  margin: 3em 0 0 2em;
+  padding: 0.5em 2.3em;
+  line-height: 1em;
+  font-size: 1.3em;
+  background-color: #191919;
+  color: white;
+  border-radius: 1.2em;
+  cursor: pointer;
+}
+
+/* APPLICO LE MEDIA QUERY ALLE VARIE RISOLUZIONI */
+
+@media screen and (max-width: 728px) {
+  section .titolo h1 {
+    font-size: 5.3em;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .emme {
+    display: none;
+  }
+
+  .sottotitolo {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #reg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 728px) {
+  .menu {
+    display: flex;
+    gap: 1em;
+    padding-right: 1em;
+    right: 5em;
+    position: absolute;
+    right: 13.5em;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  section .titolo h1 {
+    padding-top: 120px;
+  }
+}
+
+/********************* MAIN **********************/
+
+/* DEFINISCO STILI PER LE VARIE SEZIONI DELLA PAGINA CON RELATIVE 
+   MEDIA QUERY */
+
+section a {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Numero massimo di righe */
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 532px) {
+  section .titolo {
+    height: 490px;
+  }
+  section .titolo h1 {
+    font-size: 4.3em;
+  }
+  section .titolo h3 {
+    font-size: 1.3em;
+  }
+}
+
+.cartelle {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(233, 230, 230);
+  padding-right: 1.5em;
+}
+
+.cartelle .cartella {
+  width: 350px;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+}
+
+article .fotoStyle {
+  width: 210px;
+  height: 150px;
+}
+
+@media screen and (min-width: 728px) {
+  .cartelle .cartella {
+    width: 350px;
+    flex-grow: 1;
+  }
+
+  .cartelle {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 904px) {
+  .masterConteiner {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 3em;
+  }
+  aside {
+    width: 400px;
+    flex: 1;
+  }
+  #conteiner {
+    flex-grow: 1;
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1249px) {
+  .cartelle {
+    padding-right: 0;
+    flex-grow: 2;
+  }
+  .cartelle .cartella {
+    width: 411px;
+    flex-grow: 0;
+  }
+
+  main {
+    width: 1249px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1652px) {
+  .cartelle {
+    flex-grow: 2;
+  }
+}
+
+.trending {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 2.3em 0 1em 1.5em;
+}
+
+.trending h4 {
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.persona {
+  display: flex;
+
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.persona h3 {
+  margin-left: 1em;
+  font-weight: 900;
+  font-size: 1.8em;
+  color: rgb(225, 225, 225);
+}
+
+.persona img {
+  margin-left: 1.3em;
+  margin-right: 0.7em;
+  border-radius: 50%;
+}
+
+.persona a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.articolo {
+  margin-left: 5.5em;
+
+  padding-bottom: 1.8em;
+}
+
+.articolo a {
+  font-weight: 800;
+  font-size: 1em;
+  line-height: 1em;
+  text-decoration: none;
+  color: black;
+}
+
+.articolo p {
+  margin-top: 0.8em;
+  font-size: 0.9em;
+  color: rgb(87, 87, 87);
+}
+
+.link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+aside {
+  margin: 2em;
+}
+
+aside h3 {
+  font-weight: 600;
+}
+
+#topics {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding-right: 2em;
+  border-bottom: 1px solid rgb(223, 223, 223);
+  padding-bottom: 1em;
+}
+
+aside ul li {
+  margin-bottom: 2em;
+}
+
+aside ul li a {
+  text-decoration: none;
+}
+
+aside ol li a {
+  text-decoration: none;
+}
+
+#topics {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+aside ul li a {
+  list-style-type: none;
+  color: black;
+  background-color: rgb(239, 239, 239);
+  padding: 0.9em;
+  border-radius: 2em;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+#moreTopics {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+aside ol li a {
+  color: rgb(129, 129, 129);
+  font-size: 0.8em;
+}
+
+article {
+  display: flex;
+  margin-bottom: 1em;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 904px) {
+  article {
+    width: 100%;
+    flex-grow: 3;
+  }
+
+  #conteniner {
+    width: 400px;
+    flex-grow: 2;
+  }
+
+  main div aside {
+    padding-right: 0px;
+    margin-top: 0;
+    margin-right: 0;
+    width: 380px;
+    flex-grow: 2;
+  }
+
+  .conteiner {
+    width: 800px;
+    justify-content: flex-end;
+  }
+}
+
+.nome {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.nome a {
+  text-decoration: none;
+  color: #000;
+}
+
+article div div img {
+  border-radius: 50%;
+}
+
+.contenitoreGrande {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.descrizione h2 {
+  font-weight: 800;
+  margin-top: 0.8em;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.descrizione span {
+  font-size: 0.9em;
+  color: rgb(129, 129, 129);
+}
+
+article div span {
+  line-height: 3em;
+}
+
+.nome {
+  padding-bottom: 0.4em;
+}
+
+.spaziatura {
+  padding-bottom: 0.4em;
+}
+
+.title {
+  font-weight: 800;
+  margin-top: 0.8em;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
+  color: #000;
+}
+
+.descript {
+  font-size: 0.9em;
+  color: rgb(129, 129, 129);
+  text-decoration: none;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Numero massimo di righe */
+  text-overflow: ellipsis;
+}
+
+.linkType {
+  text-decoration: none;
+  color: rgb(129, 129, 129);
+  font-size: 0.9em;
+  padding: 0.3em 0.8em;
+  background-color: rgb(239, 239, 239);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 728px) {
+  article .fotoStyle {
+    width: 150px;
+    height: 110px;
+  }
+
+  .descript {
+    display: none;
+  }
+
+  .spaziatura {
+    padding: 0;
+  }
+
+  .title {
+    margin-top: 0.4em;
+    margin-bottom: 0;
+  }
+
+  .spaziatura a {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Numero massimo di righe */
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .spaziatura a {
+    font-size: 1.1em;
+  }
+  .contenitoreGrande {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .linkType {
+    display: none;
+  }
+}
+
+.foto {
+  position: relative;
+}
+
+.ancora {
+  position: absolute;
+  left: -30px;
+  bottom: -2px;
+}
