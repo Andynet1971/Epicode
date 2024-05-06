@@ -1,0 +1,77 @@
+body {
+  background-color: rgb(20, 20, 20);
+  margin-inline: 50px;
+}
+@media screen and (max-width: 1200px) {
+  body {
+    margin-inline: 40px;
+  }
+}
+h1,
+h4,
+li a,
+.testoBianco {
+  color: rgb(253, 253, 253) !important;
+}
+
+h1 {
+  font-size: 30pt !important;
+}
+
+nav li a,
+.text__nav {
+  font-size: 10pt !important;
+}
+
+.logo {
+  height: 25px;
+}
+
+.avatar {
+  height: 30px;
+}
+
+.posterMovie,
+.card {
+  transition: transform 0.5s;
+}
+
+.posterMovie:hover {
+  transform: scale(1.3);
+  z-index: 2;
+}
+
+.generi::after {
+  display: inline-block;
+  margin-left: 1.25em;
+}
+
+#carouselExample button.carousel-control-prev {
+  justify-content: start;
+  width: auto;
+  z-index: 3;
+}
+
+#carouselExample button.carousel-control-next {
+  justify-content: end;
+  width: auto;
+  z-index: 3;
+}
+
+.container {
+  max-width: 100% !important;
+}
+
+footer {
+  margin-inline: 20%;
+  margin-top: 8%;
+  color: rgb(129, 129, 129);
+}
+
+.service {
+  border-color: rgb(129, 129, 129) !important;
+}
+
+.netflixInc {
+  font-size: 9pt;
+}

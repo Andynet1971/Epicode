@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(20, 20, 20);
+  margin-inline: 20px;
+}
+
+.bottone {
+  width: 100%;
+  background-color: rgb(98, 98, 98);
+  color: white;
+}
+
+.colore {
+  color: gray;
+}
+
+.just {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
