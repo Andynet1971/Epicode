@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class User {
+        constructor(_firstName, _lastName, _age, _location) {
+          this.firstName = _firstName;
+          this.lastName = _lastName;
+          this.age = _age;
+          this.location = _location;
+        }
+        confronta = function (nuovoUtente) {
+          if (this.age < nuovoUtente.age) {
+            return `${nuovoUtente.firstName} è più vecchio di ${this.firstName}.`;
+          } else {
+            return `${nuovoUtente.firstName} è più giovane di ${this.firstName}.`;
+          }
+        };
+      }
+      const andrea = new User("Andrea", "Guarnieri", 52, "Macerata");
+      const evelyn = new User("Evelyn", "Guarnieri", 8, "Macerata");
+      const lucia = new User("Lucia", "Rossi", 46, "Recanati");
+      console.log(andrea.confronta(evelyn));
+      console.log(evelyn.confronta(lucia));
+      console.log(lucia.confronta(andrea));
+    </script>
+  </body>
+</html>
